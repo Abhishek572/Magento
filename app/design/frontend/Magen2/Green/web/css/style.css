@@ -1,0 +1,25 @@
+.panel.header{
+    background-color:#72676799;
+}
+
+.minicart-wrapper .action.showcart:before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 35px;
+    line-height: 33px;
+    color: #c90606;
+    content: '\e611';
+    font-family: 'icons-blank-theme';
+    margin: 0;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+    padding-right: 5px;
+}
+
+.header.links{
+    padding-top: 5px !important;
+}

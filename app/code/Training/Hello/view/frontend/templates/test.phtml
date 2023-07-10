@@ -1,0 +1,11 @@
+<?php 
+$totalItems = \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Framework\Registry')->registry('myEventData');
+
+$viewModel = $block->getViewModel();
+?>
+<h1>Bello Buddies WhatSup!!!</h1>
+
+<h1><?= $viewModel->getTitle(); ?></h1>
+<h1><?= $block->ja();?></h1>
+
+<h1><?php echo $totalItems; ?></h1>

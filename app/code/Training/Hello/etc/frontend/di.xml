@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+<!-- Define The pLugin File and the Method or class to edit  -->
+
+<!-- Plugins  -->
+    <type name="Magento\Quote\Model\Quote">
+        <plugin name="BeforePlugin" type="Training\Hello\Plugin\BeforePlugin" sortOrder="1" />
+    </type>
+
+    <type name ="Magento\Catalog\Model\Product">
+        <plugin name="AfterPlugin" type="Training\Hello\Plugin\AfterPlugin" sortOrder="1" />
+    </type>
+
+
+
+</config>

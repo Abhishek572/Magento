@@ -1,0 +1,16 @@
+
+.block-search{
+    float: left;
+    margin-top:15px;
+    margin-left: 15px;
+}
+
+.navigation ul{
+    display: inline-block;
+}
+
+.navigation{
+    width: 150%;
+    background: none;
+}
+

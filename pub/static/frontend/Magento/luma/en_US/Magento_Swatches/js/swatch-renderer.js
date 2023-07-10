@@ -1,0 +1,1 @@
+/var/www/html/dnb596/vendor/magento/module-swatches/view/base/web/js/swatch-renderer.js

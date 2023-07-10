@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Training_Hello::postmenu" title="Post Main" module="Training_Hello"
+            sortOrder="10" resource="Training_Hello::menu" />
+
+        <add id="Training_Hello::post_listing" title="Post Listing" module="Training_Hello"
+            sortOrder="1" action= "training_adminpanel/grid" parent="Training_Hello::postmenu"
+            resource="Training_Hello::post_listing" />
+        
+    </menu>
+</config>

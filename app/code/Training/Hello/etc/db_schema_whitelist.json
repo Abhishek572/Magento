@@ -1,0 +1,27 @@
+{
+    "training_test": {
+        "column": {
+            "Post ID": true,
+            "Post Name": true,
+            "Post URL Key": true,
+            "Post Post Content": true,
+            "Post Tags": true,
+            "Post Status": true,
+            "Post Featured Image": true,
+            "Created At": true,
+            "Updated At": true,
+            "post_id": true,
+            "post_name": true,
+            "url_key": true,
+            "post_content": true,
+            "tags": true,
+            "status": true,
+            "featured_image": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
