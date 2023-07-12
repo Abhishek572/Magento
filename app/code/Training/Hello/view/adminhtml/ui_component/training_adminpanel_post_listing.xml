@@ -13,7 +13,7 @@
                 <item name="name" xsi:type="string">add</item>
                 <item name="label" xsi:type="string" translate="true">Add Post</item>
                 <item name="class" xsi:type="string">primary</item>
-                <item name="url" xsi:type="string">*/*/</item>
+                <item name="url" xsi:type="string">*/*/new</item>
                 <!-- <item name="url" xsi:type="string">*/*/new</item> -->
             </item>
         </item>
@@ -84,6 +84,7 @@
                 </item>
             </argument>
         </column>
+
         <column name="post_name">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -93,6 +94,17 @@
                 </item>
             </argument>
         </column>
+
+            <column name="url_key">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="sorting" xsi:type="string">asc</item>
+                    <item name="label" xsi:type="string" translate="true">Url Keys</item>
+                </item>
+            </argument>
+        </column>
+
         <column name="post_content">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -102,6 +114,7 @@
                 </item>
             </argument>
         </column>
+
         <column name="created_at">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -117,5 +130,6 @@
                 <label translate="true">Actions</label>
             </settings>
         </actionsColumn>
+        
     </columns>
 </listing>

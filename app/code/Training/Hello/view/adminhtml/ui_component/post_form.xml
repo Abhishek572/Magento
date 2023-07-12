@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">post_form.post_listing_data_source</item>
@@ -11,14 +12,20 @@
             <item name="namespace" xsi:type="string">post_form</item>
         </item>
         <item name="template" xsi:type="string">templates/form/collapsible</item>
-        <!-- <item name="buttons" xsi:type="array">
-            <item name="save" xsi:type="string">Custom\Blog\Block\Adminhtml\Edit\Button\Save</item>
-        </item> -->
     </argument>
+  <settings>
+       <buttons>
+           <button name="save" class="Training\Hello\Block\Adminhtml\Edit\SaveButton"/>
+           <!-- <button name="reset" class="Magenest\MyForm\Block\Adminhtml\Form\Edit\ResetButton"/>
+           <button name="delete" class="Magenest\MyForm\Block\Adminhtml\Form\Edit\DeleteButton"/>
+           <button name="back" class="Magenest\MyForm\Block\Adminhtml\Form\Edit\BackButton"/> -->
+       </buttons>
+       <deps>
+           <dep>post_form.post_listing_data_source</dep>
+       </deps>
+   </settings>
+
     <dataSource name="post_listing_data_source">
-        <!-- <settings>
-            <submitUrl path="customblog/post/savepost"/>
-        </settings> -->
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Training\Hello\Model\DataProvider</argument>
             <argument name="name" xsi:type="string">post_listing_data_source</argument>
@@ -30,6 +37,9 @@
                 <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
             </item>
         </argument>
+         <settings>
+           <submitUrl path="training_adminpanel/manage/save"/>
+       </settings>
     </dataSource>
     <fieldset name="post_form">
         <argument name="data" xsi:type="array">
@@ -39,27 +49,27 @@
                 <item name="sortOrder" xsi:type="number">20</item>
             </item>
         </argument>
-         <field name="post_id">
+        <field name="post_id">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Name</item>
                     <item name="formElement" xsi:type="string">input</item>
-                    <item name="source" xsi:type="string">po_form</item>
+                    <item name="source" xsi:type="string">post_form</item>
                     <item name="dataScope" xsi:type="string">post_id</item>
                 </item>
             </argument>
-             <settings>
-                      <visible>false</visible>
-             </settings>
+            <settings>
+                <visible>false</visible>
+            </settings>
         </field>
-        <field name="name">
+        <field name="post_name">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
                     <item name="label" xsi:type="string" translate="true">Name</item>
                     <item name="formElement" xsi:type="string">input</item>
-                    <!-- <item name="source" xsi:type="string">post_form</item> -->
+                    <item name="source" xsi:type="string">post_form</item>
                     <item name="dataScope" xsi:type="string">post_name</item>
                 </item>
             </argument>
@@ -75,6 +85,7 @@
                 </item>
             </argument>
         </field>
+        
         <field name="post_content">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">

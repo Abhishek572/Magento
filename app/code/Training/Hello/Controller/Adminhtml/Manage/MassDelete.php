@@ -19,6 +19,14 @@ class MassDelete extends Action
     // public $blogFactory;
     public $filter;
 
+    /**
+     * Summary of __construct
+     * @param \Magento\Backend\App\Action\Context $context
+     * @param \Magento\Ui\Component\MassAction\Filter $filter
+     * @param \Training\Hello\Model\ResourceModel\MyModel\CollectionFactory $collectionFactory
+     * @param \Training\Hello\Model\MyModelFactory $ModelFactory
+     * @param \Training\Hello\Model\ResourceModel\MyModelFactory $ResourceModelFactory
+     */
     public function __construct(
         Context $context,
         Filter $filter,
@@ -33,6 +41,10 @@ class MassDelete extends Action
         parent::__construct($context);
     }
 
+    /**
+     * Summary of execute
+     * @return \Magento\Framework\Controller\ResultInterface
+     */
     public function execute()
     {
         try {
@@ -54,6 +66,10 @@ class MassDelete extends Action
         return $this->resultFactory->create(ResultFactory::TYPE_REDIRECT)->setPath('training_adminpanel/grid/index');
     }
 
+    /**
+     * Summary of _isAllowed
+     * @return bool
+     */
     public function _isAllowed()
     {
         return $this->_authorization->isAllowed('Training_Hello::massdelete');
