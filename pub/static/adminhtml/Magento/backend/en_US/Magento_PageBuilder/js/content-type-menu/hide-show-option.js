@@ -1,0 +1,1 @@
+/var/www/html/dnb596/vendor/magento/module-page-builder/view/adminhtml/web/js/content-type-menu/hide-show-option.js

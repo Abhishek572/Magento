@@ -1,0 +1,58 @@
+<!-- <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:ui:Magento_Ui/etc/ui_configuration.xsd">
+    <fieldset name="related_products" sortOrder="50">
+        <settings>
+            <collapsible>true</collapsible>
+            <label translate="true">Related Products, Up-Sells, and Cross-Sells</label>
+        </settings>
+        <container name="related_container" component="Magento_Ui/js/form/components/group" sortOrder="10">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="autoRender" xsi:type="boolean">true</item>
+                    <item name="label" xsi:type="string" translate="true">Related Products</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="componentType" xsi:type="string">container</item>
+                </item>
+            </argument>
+            <container name="related" component="Magento_Ui/js/form/components/insertListing" sortOrder="20">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="autoRender" xsi:type="boolean">false</item>
+                        <item name="componentType" xsi:type="string">insertListing</item>
+                        <item name="dataScope" xsi:type="string">data.related</item>
+                        <item name="externalProvider" xsi:type="string">data.related_listing_data_source</item>
+                        <item name="selectionsProvider" xsi:type="string">data.related_product_columns.ids</item>
+                        <item name="ns" xsi:type="string">product_form</item>
+                        <item name="render_url" xsi:type="url" path="mui/index/render"/>
+                        <item name="ns_render" xsi:type="string">product_form.related</item>
+                        <item name="filter_url_params" xsi:type="array">
+                            <item name="product_id" xsi:type="string">${ $.provider }:data.product.current_product_id</item>
+                        </item>
+                        <item name="dragging" xsi:type="boolean">true</item>
+                        <item name="disableMove" xsi:type="boolean">false</item>
+                        <item name="magicalGrid" xsi:type="boolean">true</item>
+                        <item name="clientConfig" xsi:type="array">
+                            <item name="saveUrl" xsi:type="url" path="catalog/product_relation/save"/>
+                            <item name="saveApiUrl" xsi:type="url" path="catalog/product_relation/save"/>
+                            <item name="updateUrl" xsi:type="url" path="catalog/product_relation/update"/>
+                            <item name="deleteUrl" xsi:type="url" path="catalog/product_relation/delete"/>
+                        </item>
+                    </item>
+                </argument>
+                <fieldset name="columns" sortOrder="10">
+                    <settings>
+                        <label>false</label>
+                        <collapsible>false</collapsible>
+                        <componentType>container</componentType>
+                        <dataScope>data.related_product_columns</dataScope>
+                    </settings>
+                    <field name="ids" formElement="hidden">
+                        <settings>
+                            <dataType>text</dataType>
+                            <label translate="true">Ids</label>
+                        </settings>
+                    </field>
+                </fieldset>
+            </container>
+        </container>
+    </fieldset>
+</form> -->

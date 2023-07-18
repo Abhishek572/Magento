@@ -8,6 +8,8 @@ use \Magento\Backend\App\Action as Action;
 
 class Index extends Action
   {
+    const PAGE_TITLE = 'Post Listing';
+
     protected $resultPageFactory = false;
 
     public function __construct(
@@ -23,6 +25,7 @@ class Index extends Action
   {
     $resultPage = $this->resultPageFactory->create();
     $resultPage->setActiveMenu('Training_Hello::postmenu');
+    $resultPage->addBreadcrumb(__(static::PAGE_TITLE), __(static::PAGE_TITLE));
     $resultPage->getConfig()->getTitle()->prepend((__('Post Listing')));
 
     return $resultPage;

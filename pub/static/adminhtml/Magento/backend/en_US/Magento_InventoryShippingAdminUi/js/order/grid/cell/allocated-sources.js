@@ -1,0 +1,1 @@
+/var/www/html/dnb596/vendor/magento/module-inventory-shipping-admin-ui/view/adminhtml/web/js/order/grid/cell/allocated-sources.js

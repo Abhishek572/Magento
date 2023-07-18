@@ -1,0 +1,1 @@
+/var/www/html/dnb596/vendor/magento/module-ui/view/base/web/js/modal/alert.js

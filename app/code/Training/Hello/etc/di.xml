@@ -12,4 +12,6 @@
             <argument name="resourceModel" xsi:type="string">Training\Hello\Model\ResourceModel\MyModel</argument>
         </arguments>
     </virtualType>
+
+ 
 </config>
