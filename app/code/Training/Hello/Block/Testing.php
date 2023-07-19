@@ -3,16 +3,26 @@ namespace Training\Hello\Block;
 
 use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
-use Magento\Quote\Model\Quote;
 
 
+/**
+ * Summary of Testing
+ */
 class Testing extends Template{
 
+    /**
+     * Summary of __construct
+     * @param \Magento\Framework\View\Element\Template\Context $context
+     */
     public function __construct(Context $context)
     {
         parent::__construct($context);
     }
 
+    /**
+     * Summary of ja
+     * @return int
+     */
     public function ja(){
 
     $g  = 10;

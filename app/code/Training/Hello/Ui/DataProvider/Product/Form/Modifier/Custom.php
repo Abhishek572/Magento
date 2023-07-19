@@ -5,6 +5,9 @@ use Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\AbstractModifier;
 use Magento\Ui\Component\Form\Field;
 use Magento\Ui\Component\Form\Fieldset;
 
+/**
+ * Summary of Custom
+ */
 class Custom extends AbstractModifier
 {
     /**
@@ -42,6 +45,10 @@ class Custom extends AbstractModifier
         ];
      }
 
+     /**
+      * Summary of getCustomContent
+      * @return array
+      */
      protected function getCustomContent(){
         return[
                'arguments' => [
@@ -63,6 +70,11 @@ class Custom extends AbstractModifier
             
         ];
      }
+    /**
+     * Summary of modifyData
+     * @param array $data
+     * @return array
+     */
     public function modifyData(array $data)
     {
         return $data;

@@ -12,6 +12,11 @@ class Training implements ObserverInterface
     // You can use dependency injection to get any class this observer may need.
   }
 
+  /**
+   * Summary of execute
+   * @param \Magento\Framework\Event\Observer $observer
+   * @return mixed
+   */
   public function execute(Observer $observer)
   {
     $myEventData = $observer->getData('myEventData');

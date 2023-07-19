@@ -2,18 +2,32 @@
 
 namespace Training\Hello\Controller\Index;
 
-use Magento\Framework\Event\ManagerInterface as EventManager;
 use Magento\Framework\App\Action\HttpGetActionInterface;
-use Magento\Framework\Controller\ResultInterface;
+use Magento\Framework\Event\ManagerInterface as EventManager;
 use Magento\Framework\View\Result\PageFactory;
-use Magento\Framework\DataObject;
 
 
+/**
+ * Summary of Testing
+ */
 class Testing implements HttpGetActionInterface {
+    /**
+     * Summary of _eventManager
+     * @var 
+     */
     private $_eventManager;
 
+    /**
+     * Summary of resultPageFactory
+     * @var 
+     */
     protected $resultPageFactory;
 
+    /**
+     * Summary of __construct
+     * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
+     * @param \Magento\Framework\Event\ManagerInterface $eventManager
+     */
     public function __construct(PageFactory $resultPageFactory,EventManager $eventManager){
         
         
@@ -21,6 +35,10 @@ class Testing implements HttpGetActionInterface {
         $this->_eventManager = $eventManager;
     }
            
+    /**
+     * Summary of execute
+     * @return mixed
+     */
     public function execute()
     {
         $eventData = 'Abhishek';

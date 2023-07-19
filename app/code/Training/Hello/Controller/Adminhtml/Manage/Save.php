@@ -9,6 +9,11 @@ class Save extends Action
 {
     protected $yourModelFactory;
 
+    /**
+     * Summary of __construct
+     * @param \Magento\Backend\App\Action\Context $context
+     * @param \Training\Hello\Model\MyModelFactory $yourModelFactory
+     */
     public function __construct(
         Context $context,
         YourModelFactory $yourModelFactory
@@ -17,6 +22,11 @@ class Save extends Action
         $this->yourModelFactory = $yourModelFactory;
     }
 
+    
+    /**
+     * Summary of execute
+     * @return void
+     */
     public function execute()
     {
         ?>
@@ -48,6 +58,10 @@ class Save extends Action
 
         $this->_redirect('training_adminpanel/grid/index');
     }
+    /**
+     * Summary of _isAllowed
+     * @return bool
+     */
     public function _isAllowed()
     {
         return $this->_authorization->isAllowed('Training_Hello::save');

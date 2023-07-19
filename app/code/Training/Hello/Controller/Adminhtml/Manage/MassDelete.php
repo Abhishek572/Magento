@@ -10,13 +10,32 @@ use Training\Hello\Model\MyModelFactory as ModelFactory;
 use Training\Hello\Model\ResourceModel\MyModelFactory as ResourceModelFactory;
 
 
+/**
+ * Summary of MassDelete
+ */
 class MassDelete extends Action
 {
+    /**
+     * Summary of ModelFactory
+     * @var 
+     */
     private $ModelFactory;
+    /**
+     * Summary of ResourceModelFactory
+     * @var 
+     */
     private $ResourceModelFactory;
 
+    /**
+     * Summary of collectionFactory
+     * @var 
+     */
     public $collectionFactory;
     // public $blogFactory;
+    /**
+     * Summary of filter
+     * @var 
+     */
     public $filter;
 
     /**
@@ -55,13 +74,13 @@ class MassDelete extends Action
                 $mymodel = $this->ModelFactory->create();
                 $resourceModel = $this->ResourceModelFactory->create();
                 $resourceModel->load($mymodel, $model); // for load
-                $resourceModel->save($mymodel); // for save
+                // $resourceModel->save($mymodel); // for save
                 $resourceModel->delete($mymodel,$model); // for del
                 $count++;
             }
-            $this->messageManager->addSuccess(__('A total of %1 blog(s) have been deleted.', $count));
+            $this->messageManager->addSuccessMessage(__('A total of %1 blog(s) have been deleted.', $count));
         } catch (\Exception $e) {
-            $this->messageManager->addError(__($e->getMessage()));
+            $this->messageManager->addErrorMessage(__($e->getMessage()));
         }
         return $this->resultFactory->create(ResultFactory::TYPE_REDIRECT)->setPath('training_adminpanel/grid/index');
     }

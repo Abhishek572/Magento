@@ -9,15 +9,31 @@ use Magento\Eav\Setup\EavSetupFactory;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 
+/**
+ * Summary of InstallData
+ */
 class InstallData implements DataPatchInterface {
 
 
+    /**
+     * Summary of moduleDataSetup
+     * @var 
+     */
     private $moduleDataSetup;
 
 
+    /**
+     * Summary of eavSetupFactory
+     * @var 
+     */
     private $eavSetupFactory;
 
 
+    /**
+     * Summary of __construct
+     * @param \Magento\Framework\Setup\ModuleDataSetupInterface $moduleDataSetup
+     * @param \Magento\Eav\Setup\EavSetupFactory $eavSetupFactory
+     */
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         EavSetupFactory $eavSetupFactory

@@ -5,6 +5,9 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\View\Result\PageFactory;
 use Training\Hello\Model\MyModelFactory;
 
+/**
+ * Summary of Index
+ */
 class Index implements HttpGetActionInterface
 {
 	/**
@@ -12,8 +15,18 @@ class Index implements HttpGetActionInterface
 	*/
 	protected $_pageFactory;
 
+ /**
+  * Summary of _modelFactory
+  * @var 
+  */
 	protected $_modelFactory;
 
+	/**
+	 * Summary of __construct
+	 * @param \Magento\Framework\App\Action\Context $context
+	 * @param \Magento\Framework\View\Result\PageFactory $pageFactory
+	 * @param \Training\Hello\Model\MyModelFactory $modelFactory
+	 */
 	public function __construct(
 		\Magento\Framework\App\Action\Context $context,
 		PageFactory $pageFactory,
@@ -24,6 +37,10 @@ class Index implements HttpGetActionInterface
 		$this->_modelFactory = $modelFactory;
 	}
 
+	/**
+	 * Summary of execute
+	 * @return never
+	 */
 	public function execute()
 	{
         $model = $this->_modelFactory->create();

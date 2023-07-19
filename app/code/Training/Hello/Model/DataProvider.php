@@ -1,12 +1,24 @@
 <?php
 namespace Training\Hello\Model;
  
+use Magento\Ui\DataProvider\AbstractDataProvider;
 use Training\Hello\Model\ResourceModel\MyModel\CollectionFactory;
  
-class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
+/**
+ * Summary of DataProvider
+ */
+class DataProvider extends AbstractDataProvider
 {
 
+ /**
+  * Summary of collection
+  * @var 
+  */
 	protected $collection;
+    /**
+     * Summary of loadedData
+     * @var 
+     */
     protected $loadedData;
     /**
      * @param string $name

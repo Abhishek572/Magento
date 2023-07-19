@@ -1,5 +1,7 @@
 <?php
 namespace Training\Hello\Controller\Adminhtml\Manage;
+use Magento\Backend\App\Action\Context;
+use Magento\Framework\View\Result\PageFactory;
 
 class AddPost extends \Magento\Backend\App\Action
 {
@@ -12,12 +14,16 @@ class AddPost extends \Magento\Backend\App\Action
      */
     protected $_pageFactory;
 
+  
     /**
+     * Summary of __construct
      * @param \Magento\Backend\App\Action\Context $context
+     * @param \Magento\Framework\View\Result\PageFactory $pageFactory
+     * @return void
      */
     public function __construct(
-       \Magento\Backend\App\Action\Context $context,
-       \Magento\Framework\View\Result\PageFactory $pageFactory
+       Context $context,
+       PageFactory $pageFactory
     )
     {
         $this->_pageFactory = $pageFactory;

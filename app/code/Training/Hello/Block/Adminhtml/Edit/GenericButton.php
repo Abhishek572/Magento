@@ -3,6 +3,9 @@ namespace Training\Hello\Block\Adminhtml\Edit;
 
 use Magento\Framework\UrlInterface;
 
+/**
+ * Summary of GenericButton
+ */
 class GenericButton
 {
     // private $url;

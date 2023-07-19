@@ -1,7 +1,8 @@
 <?php
 namespace Training\Hello\Controller\Adminhtml\Manage;
 
-class Edit extends \Magento\Backend\App\Action
+use Magento\Backend\App\Action;
+class Edit extends Action
 {
     const ADMIN_RESOURCE = 'Training_Hello::edit';
 

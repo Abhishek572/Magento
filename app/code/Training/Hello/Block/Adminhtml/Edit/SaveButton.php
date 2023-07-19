@@ -3,8 +3,15 @@ namespace Training\Hello\Block\Adminhtml\Edit;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
+/**
+ * Summary of GenericButton
+ */
 class SaveButton extends GenericButton implements ButtonProviderInterface
 {
+    /**
+     * Summary of getButtonData
+     * @return array
+     */
     public function getButtonData()
     {
         return [
@@ -19,6 +26,10 @@ class SaveButton extends GenericButton implements ButtonProviderInterface
             'sort_order' => 90
         ];
     }
+    /**
+     * Summary of getSaveUrl
+     * @return void
+     */
     public function getSaveUrl()
     {
         return $this->getUrl('training_adminpanel\manage\save', []);
